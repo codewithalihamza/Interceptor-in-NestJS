@@ -10,9 +10,8 @@ async function bootstrap() {
   // app.useGlobalInterceptors(new LoggingInterceptor());  // Global-Level Interceptor
 
   //✅ This will wrap every response in { success: true, data: ... } format.
-  app.useGlobalInterceptors(new TransformInterceptor());  // Global-Level Interceptor 
+  app.useGlobalInterceptors(new TransformInterceptor()); // Global-Level Interceptor
 
   await app.listen(port, () => console.log(`Nest server ready at ${port}`));
-
 }
 bootstrap();
